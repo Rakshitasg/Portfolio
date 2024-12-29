@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Reflection - Design and Analysis of Algorithms</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Base Styles */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #2C3E50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 30px;
+      color: #333;
+    }
+
+    .content-section {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
+
+    .content-section h3 {
+      font-size: 1.8rem;
+      color: #2C3E50;
+      margin-bottom: 15px;
+    }
+
+    .content-section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    ul {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #2980B9;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #3498DB;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2C3E50;
+      color: #fff;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .scrollable-content {
+      max-height: 400px;
+      overflow-y: scroll;
+      margin-top: 20px;
+      padding-right: 10px;
+      border-right: 5px solid #2C3E50;
+    }
+
+    .topic-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .topic-item {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .topic-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .topic-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .topic-item p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    Course Reflection: Design and Analysis of Algorithms
+  </header>
+
+  <div class="container">
+    <!-- Course Reflection Section -->
+    <section>
+      <div class="content-section">
+        <h3>Course Introduction</h3>
+        <p>The "Design and Analysis of Algorithms" course provides a deep understanding of how algorithms are designed, optimized, and analyzed for efficiency. It focuses on fundamental algorithms and data structures that are essential for solving real-world problems efficiently. By studying this course, students develop the skills to design algorithms, analyze their time and space complexities, and implement them to solve problems in various fields.</p>
+      </div>
+
+      <div class="content-section">
+        <h3>What Have You Studied?</h3>
+        <p>Throughout the course, we have explored a wide range of data structures and algorithms, including:</p>
+        <ul>
+          <li><strong>Data Structures:</strong> Arrays, Linked Lists, Stacks, Queues, Hash Tables, Trees, Graphs</li>
+          <li><strong>Algorithms:</strong> Sorting (Quick Sort, Merge Sort), Searching (Binary Search), Greedy Algorithms, Dynamic Programming, Divide and Conquer, Graph Algorithms (Dijkstra, BFS, DFS)</li>
+          <li><strong>Time and Space Complexity Analysis:</strong> Big O, Big Theta, and Big Omega notations</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h3>Connection with Real-Time Applications</h3>
+        <p>The concepts learned in this course are crucial for solving real-world problems across many domains. Here are some examples of how the algorithms and data structures studied are applied:</p>
+        <ul>
+          <li><strong>Search Engines:</strong> Efficient algorithms like Dijkstra's for finding the shortest path are used in routing algorithms to find the best path for users.</li>
+          <li><strong>Social Networks:</strong> Graph algorithms are applied to analyze relationships and recommend friends or content.</li>
+          <li><strong>Machine Learning:</strong> Dynamic programming and greedy algorithms are used to optimize solutions in tasks such as training models.</li>
+          <li><strong>Database Management:</strong> Data structures like B-trees and hash tables are employed for indexing and efficient query processing.</li>
+          <li><strong>Robotics:</strong> Algorithms help robots make decisions by analyzing their environment and finding optimal paths.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Topics Covered Section (original content) -->
+    <section>
+      <h2>Topics Covered</h2>
+
+      <div class="scrollable-content">
+        <div class="topic-list">
+          <!-- Linear and Non-linear Data Structures -->
+          <div class="topic-item">
+            <h3>Linear Data Structures</h3>
+            <p>Arrays, Linked Lists, Stacks, and Queues.</p>
+          </div>
+          <div class="topic-item">
+            <h3>Non-linear Data Structures</h3>
+            <p>Trees, Heaps, Graphs, HashMaps, and more.</p>
+          </div>
+
+          <!-- Trees -->
+          <div class="topic-item">
+            <h3>Binary Trees</h3>
+            <p>Tree structure with two child nodes per parent.</p>
+          </div>
+          <div class="topic-item">
+            <h3>2-3 Trees</h3>
+            <p>A balanced search tree with nodes containing two or three children.</p>
+          </div>
+          <div class="topic-item">
+            <h3>Lookup Table</h3>
+            <p>A table storing mappings of keys to values for quick lookup.</p>
+          </div>
+          <div class="topic-item">
+            <h3>Tries</h3>
+            <p>Tree-like data structure for efficient string search.</p>
+          </div>
+          <div class="topic-item">
+            <h3>AVL Trees</h3>
+            <p>A self-balancing binary search tree.</p>
+          </div>
+          <div class="topic-item">
+            <h3>Red-Black Trees</h3>
+            <p>A balanced binary search tree with specific properties.</p>
+          </div>
+          <div class="topic-item">
+            <h3>Skip Lists</h3>
+            <p>Hierarchical linked list to improve search operations.</p>
+          </div>
+          <div class="topic-item">
+            <h3>Segment Trees</h3>
+            <p>Efficient for range queries and updates.</p>
+          </div>
+
+          <!-- Graphs -->
+          <div class="topic-item">
+            <h3>Graphs</h3>
+            <p>Weighted/Unweighted, Directed/Undirected graphs.</p>
+          </div>
+          <div class="topic-item">
+            <h3>Heaps</h3>
+            <p>A complete binary tree used to implement priority queues.</p>
+          </div>
+          <div class="topic-item">
+            <h3>HashMaps</h3>
+            <p>A collection of key-value pairs for fast lookup.</p>
+          </div>
+          <div class="topic-item">
+            <h3>Union-Find</h3>
+            <p>Data structure for keeping track of disjoint sets.</p>
+          </div>
+
+          <!-- Algorithms -->
+          <div class="topic-item">
+            <h3>Sorting Algorithms</h3>
+            <p>Bubble Sort, Merge Sort, Quick Sort, etc.</p>
+          </div>
+          <div class="topic-item">
+            <h3>String Matching Algorithms</h3>
+            <p>Brute Force, KMP, Rabin-Karp, Boyer-Moore.</p>
+          </div>
+          <div class="topic-item">
+            <h3>Graph Algorithms</h3>
+            <p>BFS, DFS, Dijkstra’s, Bellman-Ford, Floyd-Warshall.</p>
+          </div>
+          <div class="topic-item">
+            <h3>Backtracking Algorithms</h3>
+            <p>N-Queen Problem, Subset Generation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Button to navigate back to portfolio -->
+  <a href="portfolio.html" class="btn">Back to Portfolio</a>
+
+  <footer>
+    <p>&copy; 2024 Data Structures and Algorithms. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

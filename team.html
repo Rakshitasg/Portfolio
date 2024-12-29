@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Design and Analysis of Algorithms</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif; /* Modern font */
+            margin: 0;
+            padding: 0;
+            background-color: #181818; /* Dark Grey Background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+            padding: 20px;
+            font-size: 2.5rem; /* Slightly larger heading */
+            color: #fff; 
+            margin-bottom: 40px;
+            text-transform: uppercase; /* Uppercase for a more impactful look */
+            letter-spacing: 2px; 
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: center; /* Align cards horizontally */
+            gap: 30px; 
+        }
+
+        .card {
+            background: #222; 
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 25px; 
+            width: 240px; /* Slightly reduced width */ 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 4px solid #fff; /* Slightly thicker border */
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+            color: #fff;
+            text-transform: uppercase; /* Uppercase for team member names */
+        }
+
+        /* Back to Portfolio Button */
+        .back-button {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .back-button a {
+            background-color: #fff; 
+            color: #333;
+            padding: 18px 35px; 
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            font-weight: bold; /* Bold button text */
+        }
+
+        .back-button a:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Meet Our Team</h2>
+
+    <div class="team-container">
+        <div class="card">
+            <img src="rakshita.jpg" alt="Rakshita Gamanagatti">
+            <h3>Rakshita Gamanagatti</h3>
+        </div>
+
+        <div class="card">
+            <img src="ummid.jpg" alt="Ummeed Salma Mulla">
+            <h3>Ummeed Salma Mulla</h3>
+        </div>
+
+        <div class="card">
+            <img src="pratibha.jpg" alt="Pratibha M Patil">
+            <h3>Pratibha M Patil</h3>
+        </div>
+
+        <div class="card">
+            <img src="waseem.jpg" alt="Md Waseem R Naikar">
+            <h3>Md Waseem R Naikar</h3>
+        </div>
+    </div>
+
+    <div class="back-button">
+        <a href="portfolio.html">Back to Portfolio</a>
+    </div>
+
+</body>
+</html>

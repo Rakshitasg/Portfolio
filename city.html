@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Design Plan - Jaipur</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #e0e0e0; /* Brighter text for better readability */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100%;
+            min-height: 100vh;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        header {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        header p {
+            font-size: 1.4rem;
+            color: #f5f5f5;
+        }
+
+        /* Top-right Vertical Buttons */
+        .top-buttons {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            gap: 15px; /* Spacing between buttons */
+        }
+
+        .top-buttons a {
+            background-color: rgba(0, 123, 255, 0.8);
+            color: #ffffff;
+            padding: 15px 25px; /* Adjusted padding for larger buttons */
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1rem; /* Adjusted font size */
+            text-align: center;
+            transition: background-color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .top-buttons a:hover {
+            background-color: rgba(0, 123, 255, 1);
+        }
+
+        /* Content Section Styling */
+        .content {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Dark background for content */
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            color: #f5f5f5;
+            text-align: left;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .content ul {
+            list-style: disc;
+            margin-left: 30px;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .content ul li {
+            margin-bottom: 10px;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* SDG Boxes Styling */
+        .sdg-box {
+            background: #1a237e; /* Dark blue */
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .sdg-box h3 {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .sdg-box ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .sdg-box ul li {
+            margin: 10px 0;
+            color: #ecf0f1;
+        }
+
+        .sdg-box ul li strong {
+            color: #ffcc00;
+        }
+
+        /* Footer Styling */
+        footer {
+            display: none; /* Remove the footer completely */
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.4rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            .top-buttons {
+                top: 10px;
+                right: 10px;
+                gap: 8px;
+            }
+
+            .top-buttons a {
+                padding: 12px 18px;
+                font-size: 1rem;
+            }
+
+            .content {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top-right Vertical Buttons -->
+    <div class="top-buttons">
+        <a href="my.html">My Profile</a>
+        <a href="course.html">Course Reflection</a>
+        <a href="team.html">Team</a>
+        <a href="businesscase.html">Business Cases</a>
+        <a href="portfolio.html">Back to Portfolio</a> <!-- Redirect to portfolio.html -->
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <h1>City Design - Jaipur</h1>
+        <p>A Sustainable Approach to Address Water Scarcity</p>
+    </header>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>City Plan</h2>
+        <p>Jaipur's city plan to address water scarcity involves a combination of modern infrastructure development, community participation, and technology-driven solutions. The city is divided into zones for targeted interventions, ensuring resources are allocated efficiently and effectively.</p>
+        <ul>
+            <li>Installing smart water meters across households to monitor usage and minimize waste.</li>
+            <li>Developing centralized reservoirs to store and distribute harvested rainwater.</li>
+            <li>Creating green spaces and permeable surfaces to aid groundwater recharge.</li>
+            <li>Implementing zonal water management strategies to ensure equitable distribution.</li>
+        </ul>
+
+        <!-- Image Section -->
+        <img src="jaipur.jpg" alt="City Plan Image" />
+
+        <h2>SDG Rules</h2>
+        <p>The Sustainable Development Goals (SDGs) play a vital role in ensuring the long-term sustainability of water management practices in Jaipur. The following SDGs are particularly relevant to this project:</p>
+        <ul>
+            <li><strong>SDG 6 - Clean Water and Sanitation:</strong> Ensuring access to safe water for all and managing water resources sustainably.</li>
+            <li><strong>SDG 13 - Climate Action:</strong> Addressing the challenges posed by climate change through improved water conservation measures.</li>
+            <li><strong>SDG 11 - Sustainable Cities and Communities:</strong> Developing cities that are resilient to climate impacts and use resources efficiently.</li>
+            <li><strong>SDG 3 - Good Health and Well-being:</strong> Ensuring that clean water and sanitation are available to improve public health outcomes.</li>
+        </ul>
+
+        <!-- SDG Boxes Section -->
+        <div class="sdg-box">
+            <h3>Sustainable Development Goals (SDGs)</h3>
+            <ul>
+                <li><strong>SDG 6:</strong> Clean Water and Sanitation</li>
+                <ul>
+                    <li><strong>6.1.1:</strong> Safe drinking water services</li>
+                    <li><strong>6.2.1:</strong> Managed sanitation services</li>
+                    <li><strong>6.3.1:</strong> Wastewater treatment</li>
+                    <li><strong>6.4.1:</strong> Water-use efficiency</li>
+                    <li><strong>6.5.1:</strong> Integrated water management</li>
+                    <li><strong>6.6.1:</strong> Ecosystem changes over time</li>
+                </ul>
+                <li><strong>SDG 7:</strong> Affordable and Clean Energy</li>
+                <ul>
+                    <li><strong>7.1.1:</strong> Access to electricity</li>
+                    <li><strong>7.2.1:</strong> Renewable energy share</li>
+                    <li><strong>7.3.1:</strong> Energy efficiency improvements</li>
+                </ul>
+                <li><strong>SDG 8:</strong> Decent Work and Economic Growth</li>
+                <ul>
+                    <li><strong>8.1.1:</strong> GDP growth per capita</li>
+                    <li><strong>8.3.1:</strong> Informal employment</li>
+                    <li><strong>8.5.1:</strong> Unemployment rates</li>
+                    <li><strong>8.7.1:</strong> Child labor</li>
+                    <li><strong>8.8.1:</strong> Safe work environments</li>
+                </ul>
+                <li><strong>SDG 11:</strong> Sustainable Cities and Communities</li>
+                <ul>
+                    <li><strong>11.1.1:</strong> Access to adequate housing</li>
+                    <li><strong>11.2.1:</strong> Sustainable transport systems</li>
+                    <li><strong>11.3.1:</strong> Urban land use</li>
+                    <li><strong>11.6.1:</strong> Environmental impact of cities</li>
+                    <li><strong>11.7.1:</strong> Access to green spaces</li>
+                </ul>
+                <li><strong>SDG 13:</strong> Climate Action</li>
+                <ul>
+                    <li><strong>13.1.1:</strong> Resilience to climate hazards</li>
+                    <li><strong>13.2.1:</strong> Integration of climate measures into policies</li>
+                    <li><strong>13.3.1:</strong> Climate education and awareness</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Section (Removed) -->
+    <footer></footer>
+
+</body>
+</html>

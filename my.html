@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1f2937; /* Dark background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            color: #f3f4f6; /* Light text color for contrast */
+            position: relative; /* Allow absolute positioning for the button */
+        }
+
+        .profile-container {
+            background-color: #2d3748; /* Dark gray container */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 320px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .profile-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .profile-picture {
+            width: 120px; /* Set a fixed width */
+            height: 120px; /* Set a fixed height */
+            border-radius: 50%;
+            object-fit: cover; /* Ensures the image covers the circle without distortion */
+            margin-bottom: 20px;
+            border: 3px solid #4b5563; /* Slightly lighter gray border */
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #e5e7eb; /* Very light gray for name */
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #d1d5db; /* Lighter gray text for general information */
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #9ca3af; /* Muted gray for footer */
+            margin-top: 30px;
+        }
+
+        .course-info {
+            font-size: 1rem;
+            color: #d1d5db; /* Lighter gray text */
+            margin-bottom: 10px;
+        }
+
+        .course-info strong {
+            color: #e5e7eb; /* Light gray for course-related labels */
+        }
+
+        /* Hidden content that will appear on hover */
+        .hover-info {
+            display: none;
+            background-color: #2d3748;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: left;
+            color: #d1d5db;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-container:hover .hover-info {
+            display: block;
+        }
+
+        .profile-container:hover .footer {
+            display: none;
+        }
+
+        .hover-info h3 {
+            color: #e5e7eb; /* Light gray for section titles */
+            margin-bottom: 10px;
+        }
+
+        .hover-info ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Back to Portfolio Button */
+        .back-to-portfolio {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 123, 255, 0.8);
+            color: #ffffff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-portfolio:hover {
+            background-color: rgba(0, 123, 255, 1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back to Portfolio Button -->
+    <a href="portfolio.html" class="back-to-portfolio">Back to Portfolio</a>
+
+    <div class="profile-container">
+        <img src="rakshitacolor.jpg" alt="Rakshita Gamanagatti" class="profile-picture">
+        <h2>Rakshita Gamanagatti</h2>
+        <p>Welcome to my profile!</p>
+
+        <!-- Profile details that will be hidden on hover -->
+        <div class="footer">
+            <p><strong>University:</strong> KLE Technological University, Hubballi</p>
+            <p><strong>Course:</strong> Design and Analysis of Algorithm</p>
+            <p class="course-info"><strong>Course Code:</strong> 24ECSC205</p>
+            <p class="course-info"><strong>SRN:</strong> 01FE24BCS410</p>
+        </div>
+
+        <!-- Hidden content that appears on hover -->
+        <div class="hover-info">
+            <h3>SKILLS</h3>
+            <ul>
+                <li>Computer skills</li>
+                <li>Work experience with Windows family, MS Word, MS Excel, MS PowerPoint</li>
+            </ul>
+
+            <h3>PROGRAMMING SKILLS</h3>
+            <ul>
+                <li>Knowledge of HTML, CSS</li>
+                <li>Knowledge of Python programming</li>
+                <li>Knowledge of Java programming</li>
+                <li>Knowledge of data structures in Python</li>
+                <li>Knowledge of SQL</li>
+            </ul>
+
+            <h3>LANGUAGES</h3>
+            <ul>
+                <li>Kannada</li>
+                <li>English</li>
+                <li>Hindi</li>
+            </ul>
+
+            <h3>ACHIEVEMENTS & AWARDS</h3>
+            <ul>
+                <li>Course completion in Introduction to Cyber Security by Infosys Springboard</li>
+                <li>Certificate of course completion in Cyber Security and Applied Ethical Hacking by Infosys Springboard</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

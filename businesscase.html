@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Case - Water Scarcity Management Plan</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000;
+            background-color: #f0f0f0;
+            line-height: 1.6;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Back to Portfolio Button */
+        .back-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin: 20px 0;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Content Box Styling */
+        .content {
+            margin-top: 20px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            background: linear-gradient(145deg, #ffffff, #f1f1f1);
+        }
+
+        /* Content Header Styling */
+        .content h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        /* Content Paragraph and List Styling */
+        .content p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content ul {
+            list-style-type: none;
+            margin: 10px 0;
+            padding: 0;
+        }
+
+        .content ul li {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .content ul li:before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+            color: #007bff;
+            font-size: 1.5rem;
+        }
+
+        /* Table Styling */
+        .content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .content table th,
+        .content table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+
+        .content table th {
+            background-color: #333;
+            color: white;
+        }
+
+        /* Styling for links */
+        .content table a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .content table a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Water Scarcity Management Plan for Jaipur</h1>
+        <p>Addressing Water Challenges through Innovative Solutions</p>
+    </header>
+
+    <!-- Back to Portfolio Button -->
+    <a href="portfolio.html" class="back-btn">Back to Portfolio</a>
+
+    <div class="content">
+        <h2>Project Overview</h2>
+        <p>Jaipur faces recurring water scarcity issues due to its semi-arid climate. This project focuses on creating a sustainable water management plan incorporating rainwater harvesting, water recycling, and optimized water usage.</p>
+
+        <h2>Key Objectives</h2>
+        <ul>
+            <li>Mitigate the impact of water scarcity.</li>
+            <li>Promote sustainable water usage and conservation practices.</li>
+            <li>Incorporate innovative technologies such as rainwater harvesting and water recycling.</li>
+        </ul>
+
+        <h2>Business Cases and Tools</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sl. No.</th>
+                    <th>Business Case</th>
+                    <th>Description</th>
+                    <th>Owner</th>
+                    <th>Tools/Data Structures</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="u.html">Record daily rainfall</a></td>
+                    <td>Recording daily rainfall involves monitoring and storing data for analysis and forecasting.</td>
+                    <td>Ummid Salma Mulla</td>
+                    <td>Weighted Graph, Directed Acyclic Graph (DAG), Binary Indexed Tree (BIT), Segment Tree</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="water.html">Check water tank levels</a></td>
+                    <td>Ensures consistent monitoring to prevent shortages or overflows.</td>
+                    <td>Rakshita Gamangatti</td>
+                    <td>Flow Network Graph, Undirected Graph, Binary Search Tree (BST), AVL Tree, Min-Heap/Max-Heap</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><a href="3.html">Distribute water to neighborhoods</a></td>
+                    <td>Optimizing water flow to meet demand efficiently.</td>
+                    <td>Prathiba Patil</td>
+                    <td>Weighted Directed Graph, Minimum Spanning Tree (MST), Shortest Path Tree</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><a href="w.html">Identify Areas with High Water Consumption</a></td>
+                    <td>Prioritize water-saving efforts by identifying high-consumption areas.</td>
+                    <td>MD Waseem Naikar</td>
+                    <td>Max Heap (Priority Queue)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><a href="5.html">Test water quality in local sources</a></td>
+                    <td>Consistent monitoring of water quality to prevent contamination.</td>
+                    <td>Rakshita Gamangatti & Ummid Salma Mulla</td>
+                    <td>Weighted Graph, Decision Tree, AVL Tree</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><a href="6.html">Plan water supply for crops</a></td>
+                    <td>Optimizing irrigation based on crop needs and available resources.</td>
+                    <td>MD Waseem Naikar</td>
+                    <td>Weighted Graph, Shortest Path Tree, Segment Tree, Fenwick Tree</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

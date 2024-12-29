@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Tank Level Monitoring in Jaipur</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #121212;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            padding: 15px 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            background: linear-gradient(to bottom, #1b1b1b, #121212);
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+            text-transform: uppercase;
+            animation: slideInFromLeft 1.5s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+            animation: slideInFromRight 1.5s ease-in-out;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #121212;
+            background: #f1f1f1;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            background-color: #d1d1d1;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: none;
+            animation: fadeInUp 2s ease-in-out;
+            margin-top: 80px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        ul li::before {
+            content: "✔";
+            color: #dcdcdc;
+            margin-right: 10px;
+        }
+
+        .code-container {
+            background: #1b1b1b;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #dcdcdc;
+            display: none;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        canvas {
+            max-width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="home.html">Home</a>
+            <a href="about_project.html">About Project</a>
+            <a href="team_details.html">Team Details</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Water Tank Level Monitoring in Jaipur</h1>
+        <p>Ensuring efficient water management for Jaipur's future.</p>
+        <button class="button" onclick="showContent()">Learn More</button>
+    </div>
+
+    <section id="content">
+        <h2>Challenges in Jaipur</h2>
+        <ul>
+            <li>Irregular rainfall patterns</li>
+            <li>Urbanization and population increase</li>
+            <li>Limited water resources</li>
+            <li>Need for accurate data and management</li>
+        </ul>
+
+        <h2>Proposed Solution</h2>
+        <ul>
+            <li>IoT sensors for real-time monitoring of water levels</li>
+            <li>Cloud-based storage and processing</li>
+            <li>Predictive algorithms for proactive management</li>
+            <li>Data visualization through a user-friendly dashboard</li>
+        </ul>
+
+        <h2>Water Tank Level Data</h2>
+        <canvas id="waterLevelChart"></canvas>
+
+        <h2>Implementation</h2>
+        <button class="button" onclick="showCode()">Show Code</button>
+
+        <div class="code-container" id="codeSection">
+            <pre>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+struct WaterLevelReading {
+    int timestamp;
+    float level;
+};
+
+struct Node {
+    WaterLevelReading data;
+    Node* left;
+    Node* right;
+
+    Node(WaterLevelReading d) : data(d), left(nullptr), right(nullptr) {}
+};
+
+class BST {
+public:
+    Node* root;
+
+    BST() : root(nullptr) {}
+
+    void insert(WaterLevelReading reading) {
+        root = insertRec(root, reading);
+    }
+
+    Node* insertRec(Node* root, WaterLevelReading reading) {
+        if (root == nullptr) {
+            return new Node(reading);
+        }
+
+        if (reading.timestamp < root->data.timestamp) {
+            root->left = insertRec(root->left, reading);
+        } else {
+            root->right = insertRec(root->right, reading);
+        }
+
+        return root;
+    }
+
+    float findHighestLevel() {
+        Node* current = root;
+        while (current->right != nullptr) {
+            current = current->right;
+        }
+        return current->data.level;
+    }
+
+    float findLowestLevel() {
+        Node* current = root;
+        while (current->left != nullptr) {
+            current = current->left;
+        }
+        return current->data.level;
+    }
+
+    float findLevelAtTimestamp(int timestamp) {
+        Node* current = root;
+        while (current != nullptr) {
+            if (current->data.timestamp == timestamp) {
+                return current->data.level;
+            } else if (timestamp < current->data.timestamp) {
+                current = current->left;
+            } else {
+                current = current->right;
+            }
+        }
+        return -1; // Not found
+    }
+};
+
+int main() {
+    BST waterLevelTree;
+
+    vector<WaterLevelReading> readings = {
+        {1, 50.0}, {2, 52.5}, {3, 48.0}, {4, 55.0}, {5, 42.0}, {6, 58.0}
+    };
+
+    for (const WaterLevelReading& reading : readings) {
+        waterLevelTree.insert(reading);
+    }
+
+    cout << "Highest Level: " << waterLevelTree.findHighestLevel() << " meters" << endl;
+    cout << "Lowest Level: " << waterLevelTree.findLowestLevel() << " meters" << endl;
+    cout << "Level at Timestamp 3: " << waterLevelTree.findLevelAtTimestamp(3) << " meters" << endl;
+
+    return 0;
+}
+            </pre>
+        </div>
+    </section>
+
+    <footer><center>
+        <p>&copy; 2024 Jaipur Water Tank Monitoring | All Rights Reserved</p>
+    </center></footer>
+
+    <script>
+        function showContent() {
+            document.querySelector('.hero').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+
+        function showCode() {
+            const codeSection = document.getElementById('codeSection');
+            codeSection.style.display = 'block';
+            codeSection.style.opacity = '1';
+            codeSection.style.transform = 'translateY(0)';
+        }
+
+        // Set up the chart
+        const ctx = document.getElementById('waterLevelChart').getContext('2d');
+        const waterLevelChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [1, 2, 3, 4, 5, 6],  // Time in hours or timestamps
+                datasets: [{
+                    label: 'Water Level (in meters)',
+                    data: [50.0, 52.5, 48.0, 55.0, 42.0, 58.0],  // Corresponding water levels
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Water Tank Level Monitoring Over Time'
+                    },
+                    legend: {
+                        position: 'top',
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Timestamp (hours)'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Water Level (meters)'
+                        },
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
