@@ -23,6 +23,8 @@
         text-align: center;
         flex-direction: column;
         overflow-x: hidden; /* Prevent horizontal scrolling */
+        width: 100%; /* Ensure the body is full width */
+        margin: 0; /* Remove any default margin */
     }
 
     /* Header Styling */
@@ -48,8 +50,7 @@
         color: #ffffff;
         text-align: center;
         padding: 20px 0;
-        position: absolute;
-        bottom: 0;
+        position: relative;
         width: 100%;
     }
 
